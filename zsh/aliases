@@ -29,6 +29,9 @@ alias grr='git remote rm'
 alias a='autotest -rails'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
+# cucumber
+alias cuke="bundle exec cucumber -r features"
+alias icuke="CUCUMBER_INTERACTIVE=true bundle exec cucumber -r features"
 
 # commands starting with % for pasting from web
 alias %=' '

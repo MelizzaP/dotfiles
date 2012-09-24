@@ -87,8 +87,10 @@ if version >= 700
     autocmd FileType tex setlocal spell spelllang=en_us
 endif
 
+set bg=dark
+set t_Co=256
 if &t_Co == 256
-  colorscheme vibrantink
+  colorscheme ir_black
 endif
 
 " Highlight trailing whitespace
