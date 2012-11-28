@@ -260,7 +260,7 @@ settings = {
   core = { real_name = ""; user_name = "hderms"; nick = "hderms"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "dbm.theme";
+    theme = "soppa.theme";
 
   };
 };
