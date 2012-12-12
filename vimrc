@@ -39,7 +39,7 @@ let g:gist_detect_filetype = 1
 
 let g:rubycomplete_buffer_loading = 1
 
-let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,public/system/*"
+let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,public/system/*,node/node_modules,*.png,*.jpg,*.jpeg"
 let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
@@ -61,11 +61,11 @@ map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <LocalLeader>ff :FuzzyFinderTextMate<CR>
-map <silent> <LocalLeader>ft :FuzzyFinderTag<CR>
-map <silent> <LocalLeader>fb :FuzzyFinderBuffer<CR>
-map <silent> <LocalLeader>fr :FuzzyFinderTextMateRefreshFiles<CR>
-map <silent> <LocalLeader>fv :vsplit<CR>:FuzzyFinderTextMate<CR>
+map <silent> <LocalLeader>ff :FufCoverageFile<CR>
+map <silent> <LocalLeader>ft :FufTag<CR>
+map <silent> <LocalLeader>fb :FufBuffer<CR>
+map <silent> <LocalLeader>fr :FufRenewCache<CR>
+map <silent> <LocalLeader>fv :vsplit<CR>:FufCoverageFile<CR>
 map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
@@ -135,3 +135,31 @@ imap <F4> :tabe ~/vim_scratch.txt<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F5> :TlistToggle<cr>
+
+" Sync open window with NERDTree
+
+" returns true iff is NERDTree open/active
+function! rc:isNTOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" returns true iff focused window is NERDTree window
+function! rc:isNTFocused()
+  return -1 != match(expand('%'), 'NERD_Tree')
+endfunction
+
+" returns true iff focused window is FuzzyFinder
+function! rc:isFFFocused()
+  return -1 != match(expand('%'), 'fuf')
+endfunction
+
+
+" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+function! rc:syncTree()
+  if &modifiable && rc:isNTOpen() && !rc:isNTFocused() && !rc:isFFFocused() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+autocmd BufEnter * call rc:syncTree()

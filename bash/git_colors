@@ -40,13 +40,32 @@ branch_color ()
   echo -ne $color
 }
 
+git_prompt ()
+{
+  echo -ne '$(if [ -n "$(parse_git_branch)" ]; then echo "[\[$(branch_color)\]$(parse_git_branch)\[${c_default}\]] "; fi)'
+}
+
 show_host_if_remote ()
 {
-  if [[ $(who am i) =~ \([0-9\.]+\)$ ]]; then
-    echo `hostname`
+  if [[ ! -z "$SSH_CONNECTION" ]]; then
+    echo -ne '\[${c_blue}\]$(hostname)\[${c_default}\]'
   else
     return 0
   fi
 }
 
-PS1='$(if [ -n "$(parse_git_branch)" ]; then echo "[\[$(branch_color)\]$(parse_git_branch)\[${c_default}\]] "; fi)\u@\[${c_blue}\]$(show_host_if_remote)\[${c_cyan}\]\w\[${c_default}\]: '
+show_colored_user ()
+{
+  if [[ "$(whoami)" = "root" ]]; then
+    echo -ne '\[${c_red}\]$(whoami)\[${c_white}\]'
+  else
+    echo -ne '\[${c_white}\]$(whoami)'
+  fi
+}
+
+show_path ()
+{
+  echo -ne '\[${c_cyan}\]\w'
+}
+
+PS1="$(git_prompt)$(show_colored_user)@$(show_host_if_remote)$(show_path)\[${c_default}\]: "
