@@ -33,5 +33,8 @@ alias rst='touch tmp/restart.txt'
 alias cuke="bundle exec cucumber -r features"
 alias icuke="CUCUMBER_INTERACTIVE=true bundle exec cucumber -r features"
 
+# general
+alias reload='. ~/.zshrc'
+
 # commands starting with % for pasting from web
 alias %=' '

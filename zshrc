@@ -1,5 +1,24 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+# Pre-load .localrc for custom theme selection
+[[ -f ~/.localrc ]] && . ~/.localrc
+ZSH_THEME_SELECTED="$ZSH_THEME"
+
+# Load oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
+plugins=($plugins brew capistrano debian git gem heroku npm rails3 ruby rvm svn yum)
+. ~/.oh-my-zsh/oh-my-zsh.sh
+
+# Bash settings
+. ~/.bash/aliases
+. ~/.bash/paths
+. ~/.bash/config
+
+# Other zsh settings
+. ~/.zsh/config
+. ~/.zsh/aliases
+. ~/.zsh/completion
+. ~/.zsh/prompt
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -31,7 +50,6 @@ ZSH_THEME="pushp0p"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git ruby rails3 rvm vi-mode archlinux cap nyan cucumber)
 
-source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
