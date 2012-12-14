@@ -37,3 +37,6 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 alias sublime="/opt/sublime-text/sublime_text &"
 alias hrps="ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024 ; printf(\"%13.2f Mb \",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf(\"%s \",$x) } print \"\" }'"
+alias uthirst="cd ~/Projects/Ruby/uthirst/"
+alias zombies="ps -el | grep 'Z'"
+parl(){rake parallel:"$1":rerun\[8\];}

@@ -257,10 +257,10 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = ""; user_name = "hderms"; nick = "hderms"; };
+  core = { real_name = ""; user_name = "noob"; nick = "pushp0p"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "soppa.theme";
+    theme = "soppa";
 
   };
 };
