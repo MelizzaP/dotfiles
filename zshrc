@@ -6,7 +6,7 @@ ZSH_THEME_SELECTED="$ZSH_THEME"
 
 # Load oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-plugins=($plugins capistrano git gem npm rails3 ruby rvm)
+plugins=($plugins capistrano git gem npm rails3 ruby rvm svn)
 
 if [[ "$unamestr" == 'Darwin' ]]; then
   # Include osx plugin on osx
