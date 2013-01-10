@@ -6,12 +6,8 @@ ZSH_THEME_SELECTED="$ZSH_THEME"
 
 # Load oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-plugins=($plugins capistrano git gem npm rails3 ruby rvm svn)
+plugins=($plugins brew capistrano git gem npm rails3 ruby rvm)
 
-if [[ "$unamestr" == 'Darwin' ]]; then
-  # Include osx plugin on osx
-  plugins=($plugins osx)
-fi
 
 DISABLE_AUTO_UPDATE="true"
 . ~/.oh-my-zsh/oh-my-zsh.sh
@@ -67,9 +63,8 @@ alias zombies="ps -el | grep 'Z'"
 parl(){rake parallel:"$1":rerun\[8\];}
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && . ~/.localrc
+function git_prompt_info() {
+ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  }
 
-export PERL_LOCAL_LIB_ROOT="/home/rvibe/perl5";
-export PERL_MB_OPT="--install_base /home/rvibe/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/rvibe/perl5";
-export PERL5LIB="/home/rvibe/perl5/lib/perl5/x86_64-linux-thread-multi:/home/rvibe/perl5/lib/perl5";
-export PATH="/home/rvibe/perl5/bin:$PATH";
