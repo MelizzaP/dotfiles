@@ -58,3 +58,11 @@ alias hrps="ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024 ; prin
 alias uthirst="cd ~/Projects/Ruby/uthirst/"
 alias zombies="ps -el | grep 'Z'"
 parl(){rake parallel:"$1":rerun\[8\];}
+# use .localrc for settings specific to one system
+[[ -f ~/.localrc ]] && . ~/.localrc
+
+export PERL_LOCAL_LIB_ROOT="/home/rvibe/perl5";
+export PERL_MB_OPT="--install_base /home/rvibe/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/rvibe/perl5";
+export PERL5LIB="/home/rvibe/perl5/lib/perl5/x86_64-linux-thread-multi:/home/rvibe/perl5/lib/perl5";
+export PATH="/home/rvibe/perl5/bin:$PATH";

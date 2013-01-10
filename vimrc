@@ -105,6 +105,7 @@ if &t_Co == 256
   let g:solarized_termcolors=256
   colorscheme solarized
 endif
+colorscheme vibrantink
 
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
