@@ -13,10 +13,6 @@ call pathogen#infect()
 filetype plugin indent on
 
 compiler ruby
-
-highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
-highlight Folded      gui=italic  guifg=Black      guibg=Grey90
-highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
 set number
 set showmatch
@@ -30,6 +26,7 @@ set wrap
 set dir=/tmp//
 set scrolloff=5
 set foldmethod=syntax
+
 
 set foldcolumn=4
 set ignorecase
@@ -183,3 +180,4 @@ function! rc:syncTree()
 endfunction
 
 autocmd BufEnter * call rc:syncTree()
+hi FoldColumn gui=bold guifg=#f08787
