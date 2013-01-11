@@ -12,7 +12,7 @@
 # you can find the most recent version here:
 # http://rolle.tux.fi
 
-default_color = "1";
+default_color = "-1";
 # Timestamp/servertag loppuun, ei alkuun
 info_eol = "false";
 replaces = { "[]=" = "$*"; };
