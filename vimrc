@@ -96,14 +96,11 @@ if version >= 700
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
   autocmd FileType tex setlocal spell spelllang=en_us
 endif
-let g:solarized_termcolors=256
-colorscheme solarized
 
 set bg=dark
 set t_Co=256
 if &t_Co == 256
-  let g:solarized_termcolors=256
-  colorscheme solarized
+  colorscheme vividchalk
 endif
 colorscheme vibrantink
 
