@@ -26,7 +26,7 @@ set wrap
 set dir=/tmp//
 set scrolloff=5
 set foldmethod=syntax
-
+set foldlevelstart=20
 set foldcolumn=4
 set ignorecase
 set smartcase
@@ -69,7 +69,7 @@ autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd FileType ruby runtime ruby_mappings.vim
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
-map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg\|.js" --extra=+f<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
