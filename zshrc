@@ -6,7 +6,7 @@ ZSH_THEME_SELECTED="$ZSH_THEME"
 
 # Load oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-plugins=($plugins brew capistrano git gem npm rails3 ruby rvm)
+plugins=($plugins  capistrano git gem npm rails3 ruby rvm)
 
 
 DISABLE_AUTO_UPDATE="true"
@@ -51,7 +51,6 @@ ZSH_THEME="pushp0p"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails3 rvm vi-mode archlinux cap nyan cucumber)
 
 
 # Customize to your needs...
