@@ -17,6 +17,12 @@ function replace {
   fi
 }
 
+# ls
+alias ls='ls -G -F'
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
 function autoformatall {
   autoformat "*.rb"
   autoformat "*.erb"
@@ -71,8 +77,17 @@ platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
   alias pbcopy="xsel -b"
-  function gvim () { (/usr/bin/gvim -f "$@" &) }
-  alias mvim=gvim
+
+  if [ -f /usr/local/bin/gvim ];
+  then
+    function gvim () { (/usr/local/bin/gvim -f "$@" &) }
+  else
+    function gvim () { (/usr/bin/gvim -f "$@" &) }
+  fi
+
+  alias mvim='gvim'
+  alias open='gnome-open'
+  alias ls='ls --color="auto" -F'
 fi
 
 

@@ -1,12 +1,6 @@
 # cd
 alias ..='cd ..'
 
-# ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
-
 # git
 alias ga='git add'
 alias gl='git pull'
@@ -24,6 +18,7 @@ alias gm='git commit -m'
 alias gma='git commit -am'
 alias gra='git remote add'
 alias grr='git remote rm'
+alias gg='git g'
 
 # rails
 alias a='autotest -rails'

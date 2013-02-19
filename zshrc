@@ -12,6 +12,9 @@ plugins=($plugins  capistrano git gem npm rails3 ruby rvm)
 DISABLE_AUTO_UPDATE="true"
 . ~/.oh-my-zsh/oh-my-zsh.sh
 
+# Disable auto-correct
+unsetopt correct_all
+
 # Bash settings
 . ~/.bash/aliases
 . ~/.bash/paths
