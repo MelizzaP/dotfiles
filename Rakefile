@@ -56,6 +56,13 @@ task :promptless_install do
   setup_vundle
 end
 
+def setup_vundle
+  # Set-up vundle and YouCompleteMe plugin
+  system('vim +BundleInstall +qall')
+  unless File.exists?('vim/bundle/YouCompleteMe/doc/tags')
+    system('cd vim/bundle/YouCompleteMe/ && ./install.sh')
+  end
+end
 
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}

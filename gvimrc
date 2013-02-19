@@ -5,10 +5,7 @@ let g:solarized_contrast = "high"
 colorscheme solarized
 colorscheme molokai
 if has("mac")
-  set guifont=Monaco:h12.00
   set fuopt=maxhorz,maxvert
-else
-  set anti gfn=Inconsolata\ 12,DejaVu\ Sans\ Mono\ Bold\ 11
 end
 
 set guioptions-=T  "remove toolbar
