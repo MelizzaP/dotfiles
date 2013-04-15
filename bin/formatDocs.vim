@@ -1,2 +1,0 @@
-:call AutoFormat()
-:wq
