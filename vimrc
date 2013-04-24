@@ -193,5 +193,6 @@ nnoremap <M-Up> <C-W>k
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'KurtPreston/vim-autoformat-rails'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-powerline'
