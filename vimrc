@@ -183,8 +183,15 @@ hi FoldColumn gui=bold guifg=#f08787
 let g:Powerline_symbols = 'fancy'
 set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
 
+" VIM Split Enhancements
+nnoremap <M-Right> <C-W>l
+nnoremap <M-Left> <C-W>h
+nnoremap <M-Down> <C-W>j
+nnoremap <M-Up> <C-W>k
+
 " Vundle configuration
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'KurtPreston/vim-autoformat-rails'
+Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-powerline'
