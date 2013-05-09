@@ -63,6 +63,9 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+
 
 autocmd FileType ruby runtime ruby_mappings.vim
 imap <C-L> <SPACE>=><SPACE>
