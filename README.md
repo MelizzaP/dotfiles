@@ -1,4 +1,4 @@
-# Kurt Preston Dot Files
+# Melissa Patterson Dot Files
 
 Provides an organized, version controlled, portable system configuration for *nix systems (including MacOS).  Notably, in includes shell customizations and aliases, custom VI commands and plugins, and the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) project.
 
