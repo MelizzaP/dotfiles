@@ -258,3 +258,14 @@ function unzipall() {
 function unrarall() {
   ls *.rar | awk -F'.rar' '{print "mkdir \""$1"\" && unrar x \""$0"\" \""$1"\""}' | sh
 }
+
+######## Karma ###########
+alias ks="rake karma:start"
+alias kr='rake karma:run'
+
+########## Bundler ##########
+alias be='bundle exec'
+alias bi='bundle install'
+alias brake='bundle exec rake'
+alias bruby='bundle exec ruby'
+alias ct='bundle exec cap -T'
