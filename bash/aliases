@@ -62,15 +62,7 @@ function notes () {
 }
 
 ######### Rails ###########
-alias qspork='bundle exec spork cucumber'
-alias rspork='bundle exec spork'
-
-alias zr='zeus rspec'
-alias zc='zeus cucumber'
-alias zs='zeus server'
-
 alias log='tail -f -n 800 log/development.log'
-alias qlog='tail -f -n 800 log/cucumber.log'
 alias tlog='tail -f -n 800 log/test.log'
 
 alias ts='tddium spec'
@@ -107,17 +99,6 @@ function trspec () {
   killall yes
 }
 
-####### Cucumber ##########
-alias cuke='bundle exec cucumber -r features'
-alias icuke='CUCUMBER_INTERACTIVE=true bundle exec cucumber -r features'
-
-# slq (show last cukes): Show last 5 modified cukes
-alias slq='find . -type f -name "*.feature" -print | xargs ls -rlt | tail -5'
-
-# lq (last cuke): Run last modified cuke
-alias lq='find . -type f -name "*.feature" -print | xargs ls -rt | tail -1 | xargs bundle exec cucumber -r features'
-
-
 ####### Linux-Mac Compatibility ###########
 platform='unknown'
 unamestr=`uname`
@@ -142,20 +123,20 @@ fi
 # Shortcuts
 alias ga='git add'
 alias gl='git pull'
-alias gp='git push'
+alias gf='git fetch --all'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
-alias gb='git branch'
+alias gb='git branch --all'
 alias gs='git status'
+alias gst='git stash'
+alias gsp='git stash pop'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 alias gm='git commit -m'
 alias gma='git commit -am'
-alias gra='git remote add'
-alias grr='git remote rm'
 alias gg='git g'
 
 # Branch Clean: clears out all local git branches that have already been merged into the active branch
