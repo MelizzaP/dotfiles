@@ -36,13 +36,15 @@ bind down:shift;alt  nudge +0   +10%
 bind pad0:ctrl;alt throw left resize
 bind pad.:ctrl;alt throw right  resize
 
+bind 0:ctrl;alt throw left resize
+bind .:ctrl;alt throw right  resize
 # Focus Bindings
 bind pad6:cmd;alt focus right
 bind pad4:cmd;alt focus left
 bind pad8:cmd;alt focus up
 bind pad2:cmd;alt focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
+bind up:cmd;ctrl   focus behind
+bind down:cmd;ctrl focus behind
 
 # Window Hints
 bind esc:cmd hint
