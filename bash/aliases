@@ -248,3 +248,12 @@ alias bi='bundle install'
 alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
 alias ct='bundle exec cap -T'
+
+
+######## Voices ############
+alias sing='say -v Cellos'
+alias alien='say -v Zarvox'
+alias whisper='say -v Whisper'
+alias happy='say -v Good'
+alias kathy='say -v Kathy'
+alias princess='say -v Princess'
