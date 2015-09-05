@@ -1,6 +1,7 @@
 ####### General ###########
 
 alias ..='cd ..'
+alias stt='set_tab_title'
 
 # changing directory to code project
 function c { cd $CODE_HOME/$1; }
