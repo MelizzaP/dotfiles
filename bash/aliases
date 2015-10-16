@@ -248,6 +248,7 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
+alias br='bundle exec rspec'
 alias ct='bundle exec cap -T'
 
 ###### Capistrano #######
@@ -255,6 +256,10 @@ alias cpd='cap production deploy'
 alias cp='cap production'
 alias cpc='cap production deploy:cleanup'
 
+function set_tab_title () {
+  TITLE=$*;
+  export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
+}
 
 ######## Voices ############
 alias sing='say -v Cellos'
