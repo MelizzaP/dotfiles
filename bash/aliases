@@ -250,6 +250,11 @@ alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
 alias ct='bundle exec cap -T'
 
+###### Capistrano #######
+alias cpd='cap production deploy'
+alias cp='cap production'
+alias cpc='cap production deploy:cleanup'
+
 
 ######## Voices ############
 alias sing='say -v Cellos'
