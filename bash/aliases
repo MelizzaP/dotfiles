@@ -271,3 +271,9 @@ alias whisper='say -v Whisper'
 alias happy='say -v Good'
 alias kathy='say -v Kathy'
 alias princess='say -v Princess'
+
+######## OLAB #############
+alias cs='cd ~/src/opinionlab/comment-sense'
+alias cc='cd ~/src/opinionlab/comment-card-templates'
+alias sl='cd ~/src/opinionlab/store-locator'
+alias ol='cd ~/src/opinionlab'
