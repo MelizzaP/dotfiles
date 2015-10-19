@@ -1,4 +1,4 @@
-colorscheme hybrid
+colorscheme bop
 if has("mac")
   set fuopt=maxhorz,maxvert
   set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
