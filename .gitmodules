@@ -198,6 +198,3 @@
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/colors"]
-	path = vim/bundle/colors
-	url = git@github.com:MelizzaP/colorz.git
