@@ -98,6 +98,9 @@ function trspec () {
   killall yes
 }
 
+####### clojure ##########
+alias lrs='lein ring server'
+
 ####### Linux-Mac Compatibility ###########
 platform='unknown'
 unamestr=`uname`
