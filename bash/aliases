@@ -140,6 +140,7 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 alias gm='git commit -m'
 alias gma='git commit -am'
 alias gg='git g'
+alias glp="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset'\'' --abbrev-commit --all'"
 
 # Branch Clean: clears out all local git branches that have already been merged into the active branch
 brclean () {
