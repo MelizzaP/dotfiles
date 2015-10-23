@@ -257,7 +257,7 @@ alias ct='bundle exec cap -T'
 
 ###### Capistrano #######
 alias cpd='cap production deploy'
-alias cp='cap production'
+alias cpr='cap production'
 alias cpc='cap production deploy:cleanup'
 
 function set_tab_title () {
