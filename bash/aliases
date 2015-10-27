@@ -255,11 +255,6 @@ alias bruby='bundle exec ruby'
 alias br='bundle exec rspec'
 alias ct='bundle exec cap -T'
 
-###### Capistrano #######
-alias cpd='cap production deploy'
-alias cpr='cap production'
-alias cpc='cap production deploy:cleanup'
-
 function set_tab_title () {
   TITLE=$*;
   export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
