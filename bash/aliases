@@ -254,12 +254,7 @@ alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
 alias br='bundle exec rspec'
 alias ct='bundle exec cap -T'
-
-function set_tab_title () {
-  TITLE=$*;
-  export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
-}
-
+#
 ######## Voices ############
 alias sing='say -v Cellos'
 alias alien='say -v Zarvox'
