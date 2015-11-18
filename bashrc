@@ -1,4 +1,5 @@
 source ~/.bash/aliases
+source ~/.bash/iterm_functions
 source ~/.bash/completions
 source ~/.bash/paths
 source ~/.bash/config

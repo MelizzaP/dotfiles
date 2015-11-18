@@ -5,7 +5,7 @@ Provides an organized, version controlled, portable system configuration for *ni
 ## Installation
 
 ```
-  git clone git://github.com/KurtPreston/dotfiles
+  git@github.com:MelizzaP/dotfiles.git
   cd dotfiles
   rake install
 ```
