@@ -232,6 +232,9 @@ function yellow() {
 
 ############## NODE ###########
 alias npm-exec='PATH=$(npm bin):$PATH'
+alias ni='npm install'
+alias nt='npm test'
+alias nrp='npm run protractor'
 
 ############# FILE EXTRACTION ##########
 function unzipall() {
