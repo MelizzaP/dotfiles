@@ -256,7 +256,11 @@ alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
 alias br='bundle exec rspec'
 alias ct='bundle exec cap -T'
-#
+
+######## FUNNNNNNNNNN!!!!!!!!!!!!  ############
+alias 😻='telnet nyancat.dakko.us'
+alias trip='while :;do printf "\e[%d;%dH\e[48;5;%dm \e[0m" $(($RANDOM%$LINES)) $(($RANDOM%$COLUMNS)) $(($RANDOM%216 )); done # Its alive!'
+
 ######## Voices ############
 alias sing='say -v Cellos'
 alias alien='say -v Zarvox'
