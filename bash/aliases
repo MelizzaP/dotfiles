@@ -140,6 +140,7 @@ alias gma='git commit -am'
 alias gg='git g'
 alias glp="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset'\'' --abbrev-commit --all'"
 alias gsq='git rebase -i'
+alias gitdis='git subtree push --prefix dist origin gh-pages'
 
 # Branch Clean: clears out all local git branches that have already been merged into the active branch
 brclean () {
@@ -256,7 +257,11 @@ alias brake='bundle exec rake'
 alias bruby='bundle exec ruby'
 alias br='bundle exec rspec'
 alias ct='bundle exec cap -T'
-#
+
+######## FUNNNNNNNNNN!!!!!!!!!!!!  ############
+alias 😻='telnet nyancat.dakko.us'
+alias trip='while :;do printf "\e[%d;%dH\e[48;5;%dm \e[0m" $(($RANDOM%$LINES)) $(($RANDOM%$COLUMNS)) $(($RANDOM%216 )); done # Its alive!'
+
 ######## Voices ############
 alias sing='say -v Cellos'
 alias alien='say -v Zarvox'
