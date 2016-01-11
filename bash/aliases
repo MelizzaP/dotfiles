@@ -101,6 +101,10 @@ function trspec () {
 ####### clojure ##########
 alias lrs='lein ring server'
 
+####### Docker ##########
+alias dm=docker-machine
+alias dc=docker-compose
+
 ####### Linux-Mac Compatibility ###########
 platform='unknown'
 unamestr=`uname`
