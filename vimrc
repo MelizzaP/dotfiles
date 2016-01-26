@@ -76,6 +76,10 @@ autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd FileType ruby runtime ruby_mappings.vim
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
