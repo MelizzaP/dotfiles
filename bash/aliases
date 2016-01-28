@@ -2,6 +2,14 @@
 
 alias ..='cd ..'
 alias stt='set_tab_title'
+alias tb='tab-blue'
+alias tr='tab-red'
+alias to='tab-orange'
+alias ty='tab-yellow'
+alias tg='tab-green'
+alias tp='tab-purple'
+alias tw='tab-white'
+alias td='tab-gray'
 
 # changing directory to code project
 function c { cd $CODE_HOME/$1; }
