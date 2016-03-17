@@ -113,6 +113,11 @@ alias lrs='lein ring server'
 alias dm=docker-machine
 alias dc=docker-compose
 
+######## Grunt #########
+alias grbld='grunt build'
+alias grsrv='grunt serve'
+alias gratch='grunt watch'
+
 ####### Linux-Mac Compatibility ###########
 platform='unknown'
 unamestr=`uname`
