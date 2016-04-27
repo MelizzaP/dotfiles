@@ -254,6 +254,16 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "call vundle#rc()
 "Bundle 'gmarik/vundle'
 "Bundle 'Valloric/YouCompleteMe'
+"
+" Cursor/Line Highlighting
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=236
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=236
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+  au WinLeave * setlocal nocursorline nocursorcolumn
+augroup END
 
 " Allow local settings overrides with ~/.vimrc.local
 if filereadable(glob("~/.vimrc.local"))
