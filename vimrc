@@ -115,7 +115,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme hybrid1
+  colorscheme bop
 endif
 
 " Highlight trailing whitespace
