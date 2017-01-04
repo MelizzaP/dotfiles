@@ -1,6 +1,6 @@
 set encoding=utf-8
 set nocompatible
-syntax on
+syntax enable
 
 filetype off
 " Disable FuzzyFinder for old version of VIM
@@ -23,7 +23,7 @@ set hlsearch
 set number
 set showmatch
 set incsearch
-set background=dark
+set background=light
 set hidden
 set backspace=indent,eol,start
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
@@ -116,7 +116,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme bop
+  colorscheme solarized
 endif
 
 " Highlight trailing whitespace
@@ -257,8 +257,8 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "Bundle 'Valloric/YouCompleteMe'
 "
 " Cursor/Line Highlighting
-autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=236
-autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=236
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=111
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=111
 
 augroup CursorLine
   au!
