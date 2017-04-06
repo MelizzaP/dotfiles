@@ -257,8 +257,8 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "Bundle 'Valloric/YouCompleteMe'
 "
 " Cursor/Line Highlighting
-autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=111
-autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=111
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=46
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=46
 
 augroup CursorLine
   au!

@@ -7,3 +7,9 @@ source ~/.bash/config
 if [ "$TERM" != "dumb" ] && [ -n "$TERM" ]; then
   source ~/.bash/prompt
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# added by travis gem
+[ -f /Users/melissapatterson/.travis/travis.sh ] && source /Users/melissapatterson/.travis/travis.sh
