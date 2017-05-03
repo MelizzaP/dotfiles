@@ -26,7 +26,7 @@ set incsearch
 set background=light
 set hidden
 set backspace=indent,eol,start
-set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+set textwidth=0 nosmartindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set ruler
 set wrap
 set dir=/tmp//
@@ -257,8 +257,8 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "Bundle 'Valloric/YouCompleteMe'
 "
 " Cursor/Line Highlighting
-autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=111
-autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=111
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=46
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=46
 
 augroup CursorLine
   au!
