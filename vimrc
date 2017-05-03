@@ -26,7 +26,7 @@ set incsearch
 set background=light
 set hidden
 set backspace=indent,eol,start
-set textwidth=0 nosmartindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ruler
 set wrap
 set dir=/tmp//
