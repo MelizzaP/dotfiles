@@ -16,6 +16,22 @@ filetype plugin indent on
 
 compiler ruby
 
+" modify selected text using combining diacritics
+command! -range -nargs=0 Overline        call s:CombineSelection(<line1>, <line2>, '0305')
+command! -range -nargs=0 Underline       call s:CombineSelection(<line1>, <line2>, '0332')
+command! -range -nargs=0 DoubleUnderline call s:CombineSelection(<line1>, <line2>, '0333')
+command! -range -nargs=0 Strikethrough   call s:CombineSelection(<line1>, <line2>, '0336')
+
+function! s:CombineSelection(line1, line2, cp)
+  execute 'let char = "\u'.a:cp.'"'
+  execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
+endfunction
+
+vnoremap ST :Strikethrough<CR>
+vnoremap OL :Overline<CR>
+vnoremap UL :Underline<CR>
+vnoremap DUL :DoubleUnderline<CR>
+
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
