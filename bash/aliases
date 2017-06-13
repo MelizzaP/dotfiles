@@ -11,6 +11,8 @@ alias tp='tab-purple'
 alias tw='tab-white'
 alias td='tab-gray'
 
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
 # changing directory to code project
 function c { cd $CODE_HOME/$1; }
 
@@ -254,7 +256,6 @@ function yellow() {
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias ni='npm install'
 alias nt='npm test'
-alias nrp='npm run protractor'
 
 ############# FILE EXTRACTION ##########
 function unzipall() {
