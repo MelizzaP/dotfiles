@@ -134,6 +134,7 @@ endif
 
 if &t_Co == 256
   colorscheme solarized
+  hi Normal guibg=NONE ctermbg=NONE
 endif
 
 " Highlight trailing whitespace
