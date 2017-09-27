@@ -162,6 +162,7 @@ alias glp="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset
 alias gsq='git rebase -i'
 alias gitdis='git subtree push --prefix dist origin gh-pages'
 alias conflicts='git ls-files -u'
+alias ohfudge='git merge --abort'
 
 # Branch Clean: clears out all local git branches that have already been merged into the active branch
 brclean () {
