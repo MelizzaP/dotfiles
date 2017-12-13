@@ -140,13 +140,14 @@ endif
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>hws :highlight clear ExtraWhitespace<CR>
 
 " Highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%121v.*/
+autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%81v.*/
 highlight LineLengthError ctermbg=182 guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=182 guibg=black
 
