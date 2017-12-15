@@ -79,6 +79,10 @@ let g:ctrlp_reuse_window = 'startify'
 
 let g:no_html_toolbar = 'yes'
 
+let g:prettier#autoformat = 0
+let g:prettier#config#parser = 'babylon'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+
 " Delete this line (or set g:autoclose_on to 1) to enable autoclose parens
 let g:autoclose_on = 1
 " au BufWinLeave * silent! mkview
