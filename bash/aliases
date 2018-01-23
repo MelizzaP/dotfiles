@@ -1,6 +1,9 @@
 ####### General ###########
 
+alias reload='. ~/.bash_profile'
 alias ..='cd ..'
+alias vi='vim'
+
 alias stt='set_tab_title'
 alias tb='tab-blue'
 alias tr='tab-red'
@@ -16,31 +19,6 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 # changing directory to code project
 function c { cd $CODE_HOME/$1; }
-
-alias reload='. ~/.bash_profile'
-
-# replace: find/replace strings across multiple files
-#     example: replace *.rb find_string replace_string
-function replace {
-  ignore_hidden_folders="-not -path '*/.*/*'"
-  ignore_tmp_dir="-not -path './tmp/*'"
-  ignore_bower="-not -path '*/bower_components/*'"
-  find_command="find . $ignore_hidden_folders $ignore_tmp_dir $ignore_bower -name \"$1\" -type f -print0"
-
-  if [[ "$unamestr" == 'Darwin' ]]; then
-    eval $find_command | xargs -0 sed -i '' -e "s/$2/$3/g"
-  else
-    eval $find_command | xargs -0 sed -i -e "s/$2/$3/g"
-  fi
-}
-
-# Extension move
-#     example: extmv . jpeg jpg
-extmv () {
-    find "${1}" -type f -name "*.${2}" |
-    sed "s/\.${2}$//" |
-    xargs -I% mv -iv "%.${2}" "%.${3}"
-}
 
 # ls
 alias ls='ls -G -F'
@@ -61,17 +39,6 @@ function autoformatall {
 
 command_exists () {
     type "$1" &> /dev/null ;
-}
-
-alias yumy='yum -y'
-alias yummy='yum -y'
-alias vi='vim'
-
-# Open up last note in vim
-function notes () {
-  vim_cmd="$(which gvim || which mvim || which vim)"
-  last_note=$(cd $NOTES_DIR; ls -td $(find . -type f) 2> /dev/null | head -n 1) &&
-  $vim_cmd $NOTES_DIR/$last_note -c ":NERDTree $NOTES_DIR" -c "wincmd p"
 }
 
 ######### Rails ###########
@@ -109,59 +76,21 @@ function trspec () {
   killall yes
 }
 
-####### clojure ##########
-alias lrs='lein ring server'
-
-####### Docker ##########
-alias dm=docker-machine
-alias dc=docker-compose
-
-######## Grunt #########
-alias grbld='grunt build'
-alias grsrv='grunt serve'
-alias gratch='grunt watch'
-
-####### Linux-Mac Compatibility ###########
-platform='unknown'
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
-  alias pbcopy="xsel -b"
-
-  if [ -f /usr/local/bin/gvim ];
-  then
-    function gvim () { (/usr/local/bin/gvim -f "$@" &) }
-    alias mvim='gvim'
-  else
-    function gvim () { (/usr/bin/gvim -f "$@" &) }
-  fi
-
-  alias open='gnome-open'
-  alias ls='ls --color="auto" -F'
-fi
-
-
 ################# Git ###############
 alias ga='git add'
 alias gl='git pull'
-alias gf='git fetch --all'
+alias gm='git commit -m'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gc='git commit'
-alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias gst='git stash'
 alias gsp='git stash pop'
-alias gt='git branch --set-upstream-to=origin/master'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-alias gm='git commit -m'
-alias gma='git commit -am'
+alias gma='git commit -ammend'
 alias gg='git g'
 alias glp="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset'\'' --abbrev-commit --all'"
 alias gsq='git rebase -i'
-alias gitdis='git subtree push --prefix dist origin gh-pages'
 alias conflicts='git ls-files -u'
 alias ohfudge='git merge --abort'
 
@@ -254,11 +183,6 @@ function yellow() {
     echo -e "$YELLOW$*$NORMAL"
 }
 
-############## NODE ###########
-alias npm-exec='PATH=$(npm bin):$PATH'
-alias ni='npm install'
-alias nt='npm test'
-
 ############# FILE EXTRACTION ##########
 function unzipall() {
   ls *.zip | awk -F'.zip' '{print "unzip \""$0"\" -d \""$1"\""}' | sh
@@ -268,32 +192,5 @@ function unrarall() {
   ls *.rar | awk -F'.rar' '{print "mkdir \""$1"\" && unrar x \""$0"\" \""$1"\""}' | sh
 }
 
-######## Karma ###########
-alias ks="rake karma:start"
-alias kr='rake karma:run'
-
-########## Bundler ##########
-alias be='bundle exec'
-alias bi='bundle install'
-alias brake='bundle exec rake'
-alias bruby='bundle exec ruby'
-alias br='bundle exec rspec'
-alias ct='bundle exec cap -T'
-
 ######## FUNNNNNNNNNN!!!!!!!!!!!!  ############
-alias 😻='telnet nyancat.dakko.us'
 alias trip='while :;do printf "\e[%d;%dH\e[48;5;%dm \e[0m" $(($RANDOM%$LINES)) $(($RANDOM%$COLUMNS)) $(($RANDOM%216 )); done # Its alive!'
-
-######## Voices ############
-alias sing='say -v Cellos'
-alias alien='say -v Zarvox'
-alias whisper='say -v Whisper'
-alias happy='say -v Good'
-alias kathy='say -v Kathy'
-alias princess='say -v Princess'
-
-######## OLAB #############
-alias cs='cd ~/src/opinionlab/comment-sense'
-alias cc='cd ~/src/opinionlab/comment-card-templates'
-alias sl='cd ~/src/opinionlab/store-locator'
-alias ol='cd ~/src/opinionlab'
