@@ -189,6 +189,11 @@
 	path = vim/bundle/vim-slim
   url = https://github.com/slim-template/vim-slim.git
 
+# Vim javascript
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+  url = https://github.com/pangloss/vim-javascript.git
+
 # Better JavaScript indentation
 [submodule "vim/bundle/JavaScript-Indent"]
 	path = vim/bundle/JavaScript-Indent
@@ -198,3 +203,9 @@
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+
+# Prettier
+[submodule "vim/bundle/vim-prettier"]
+	path = vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
+
