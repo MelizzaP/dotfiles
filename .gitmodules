@@ -204,3 +204,6 @@
 	path = vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
 
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
