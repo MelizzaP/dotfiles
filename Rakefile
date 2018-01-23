@@ -13,7 +13,8 @@ task :install do
 
   system('bin/install_powerline_fonts.sh')
 
-  setup_vundle
+  setup_neovim
+  setup_vim_plugins
 end
 
 desc "install dotfiles without any prompts, assuming overwrite"
@@ -24,7 +25,8 @@ task :promptless_install do
   create_local_files
   link_files(Dir.pwd, ENV['HOME'], :prefix => '.', :replace_all => true)
 
-  setup_vundle
+  setup_neovim
+  setup_vim_plugins
 end
 
 def create_local_files
@@ -32,12 +34,22 @@ def create_local_files
   system('touch ~/.gvimrc.local')
 end
 
-def setup_vundle
-  # Set-up vundle and YouCompleteMe plugin
-  system('vim +BundleInstall +qall')
-  if File.exists?('vim/bundle/YouCompleteMe') && !File.exists?('vim/bundle/YouCompleteMe/doc/tags')
-    system('cd vim/bundle/YouCompleteMe/ && ./install.sh')
+def setup_vim_plugins
+  if File.exists?('vim/bundle/vimproc.vim/Makefile') && Dir.glob('vim/bundle/vimproc.vim/lib/vimproc_*.so').empty?
+    puts 'Building vimproc'
+    system('cd vim/bundle/vimproc.vim && make')
   end
+
+  if File.exists?('vim/bundle/YouCompleteMe') && !File.exists?('vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so') && which('python')
+    puts 'Setting up YouCompleteMe'
+    system('cd vim/bundle/YouCompleteMe/ && ./install.py --tern-completer')
+  end
+end
+
+def setup_neovim
+  system('mkdir -p ~/.config')
+  system('ln -ns ~/.vim ~/.config/nvim')
+  system('ln -s ~/.vimrc ~/.config/nvim/init.vim')
 end
 
 def link_files(source_dir, destination_dir, opts)
@@ -106,9 +118,20 @@ def replace_file(source, destination, copy = false)
 end
 
 def initialize_submodules
-  system %Q{git submodule init && git submodule update && git submodule status}
+  system %Q{git submodule update --init --recursive && git submodule status}
 end
 
 def file_hash(filename)
   Digest::MD5.hexdigest(IO.read(filename))
+end
+
+def which(cmd)
+  exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
+  ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
+    exts.each { |ext|
+      exe = File.join(path, "#{cmd}#{ext}")
+      return exe if File.executable?(exe) && !File.directory?(exe)
+    }
+  end
+  return nil
 end
