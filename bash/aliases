@@ -12,6 +12,7 @@ alias tw='tab-white'
 alias td='tab-gray'
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 # changing directory to code project
 function c { cd $CODE_HOME/$1; }

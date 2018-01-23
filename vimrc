@@ -53,6 +53,7 @@ set foldcolumn=0
 set ignorecase
 set smartcase
 set diffopt+=vertical
+set clipboard=unnamed
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
