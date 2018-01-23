@@ -1,0 +1,90 @@
+################# Functions ###############
+
+# Branch Clean: clears out all local git branches that have already been merged into the active branch
+brclean () {
+  branches_to_delete="$( git branch --merged | grep -v '^\*' | grep -v 'master' | grep -v 'staging' )"
+  if [[ "$branches_to_delete" == "" ]]; then
+    echo "No branches to delete"
+  else
+    echo $branches_to_delete | xargs git branch -d
+  fi
+}
+
+# Remote Branch Clean: clears out all remote branches that have already been merged into master
+rbrclean () {
+  # Fetch remote branches and clear refs to deleted ones
+  git fetch --prune
+
+  # Update master
+  git checkout master && git pull origin master
+
+  if [ $? -eq 0 ]; then
+    echo "Checkout successful -- Updating/cleaning code"
+
+    branches_to_delete="$(git branch -r --merged | grep -v '^\*' | grep -v 'origin/master' | grep -v 'origin/staging' | grep 'origin/' | sed 's/origin\///g')"
+    if [[ "$branches_to_delete" == "" ]]; then
+      echo "No remote branches to delete"
+    else
+      echo $branches_to_delete | xargs git push --delete origin
+    fi
+  else
+    echo "Checkout unsuccessful -- Commit any working changes"
+  fi
+}
+
+# Git Branch Clean: cleans out local and remote branches
+function gbclean {
+  # rbrclean
+  brclean
+  git pup
+  git gc
+}
+
+# Git Branch Authors: show authors of all git branches
+function git-branch-authors {
+  git branch -r | grep -v 'HEAD' | while read branch
+  do
+    name="$(git log --pretty=tformat:%an -1 $branch)"
+    if [ $# -gt 0 ] && [ "$name" == "$1" ]
+    then
+      echo $branch : $name
+    fi
+
+    if [ $# -eq 0 ]
+    then
+      echo $branch : $name
+    fi
+  done
+}
+
+function git-remote-branches {
+  for k in `git branch -r|awk '{print $1}'`;do echo `git show --pretty=format:"%Cgreen%ci %Cblue%cr %Cred%cn %Creset" $k|head -n 1`\\t$k;done|sort -r
+}
+
+# Git Recent: show git branches organized by date
+function git-recent {
+  git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
+}
+
+################# Aliases ###############
+alias ga='git add'
+alias gl='git pull'
+alias gm='git commit -m'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias gst='git stash'
+alias gsp='git stash pop'
+alias gma='git commit -ammend'
+alias gg='git g'
+alias git-pretty-log="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset'\'' --abbrev-commit --all'"
+alias gsq='git rebase -i'
+alias conflicts='git ls-files -u'
+alias ohfudge='git merge --abort'
+alias gbc='gbclean'
+alias git-remote-branches-by='git-remote-branches | grep'
+
+alias gba='git-branch-authors'
+

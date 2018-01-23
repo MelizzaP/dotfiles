@@ -1,0 +1,111 @@
+source ~/.bash/alias/git
+
+####### General ###########
+
+alias reload='. ~/.bash_profile'
+alias ..='cd ..'
+alias vi='vim'
+
+alias stt='set_tab_title'
+alias tb='tab-blue'
+alias tr='tab-red'
+alias to='tab-orange'
+alias ty='tab-yellow'
+alias tg='tab-green'
+alias tp='tab-purple'
+alias tw='tab-white'
+alias td='tab-gray'
+
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+
+# changing directory to code project
+function c { cd $CODE_HOME/$1; }
+
+# ls
+alias ls='ls -G -F'
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+function autoformatall {
+  autoformat "*.rb"
+  autoformat "*.erb"
+  autoformat "*.css"
+  autoformat "*.js"
+  autoformat "*.coffee"
+  autoformat "*.scss"
+  autoformat "*.sass"
+  autoformat "*.feature"
+}
+
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+######### Rails ###########
+alias log='tail -f -n 800 log/development.log'
+alias tlog='tail -f -n 800 log/test.log'
+
+alias rc='bundle exec rails console'
+alias rg='bundle exec rails generate'
+alias rs='bundle exec rails server'
+
+alias rst='touch tmp/restart.txt'
+
+####### Rspec ##########
+alias irspec='INTERACTIVE_SPEC=true bundle exec rspec'
+
+# rrspec -- rerun rspec test 10 times
+function rrspec () {
+  for i in {1..10}; do bundle exec rspec $1; done
+}
+
+# trspec -- thrash CPU + rerun rspec test 10 times
+function trspec () {
+  # Start thrashing processes
+  THRASHERS=8
+  for ((i = 1 ; i <= THRASHERS ; i++)); do
+    echo "Starting thrasher $i/$THRASHERS"
+    (yes &) > /dev/null 2>&1
+  done
+
+  # Run rspec test 10 times
+  for i in {1..10}; do rspec $1; done
+
+  # Stop thrashers
+  echo "Stopping thrashers"
+  killall yes
+}
+
+
+
+############## COLOR PRINTING #################
+NORMAL=$(tty -s && tput sgr0)
+GREEN=$(tty -s && tput setaf 2 && tput bold)
+YELLOW=$(tty -s && tput setaf 3)
+RED=$(tty -s && tput setaf 1)
+
+function red() {
+    echo -e "$RED$*$NORMAL"
+}
+
+function green() {
+    echo -e "$GREEN$*$NORMAL"
+}
+
+function yellow() {
+    echo -e "$YELLOW$*$NORMAL"
+}
+
+############# FILE EXTRACTION ##########
+function unzipall() {
+  ls *.zip | awk -F'.zip' '{print "unzip \""$0"\" -d \""$1"\""}' | sh
+}
+
+function unrarall() {
+  ls *.rar | awk -F'.rar' '{print "mkdir \""$1"\" && unrar x \""$0"\" \""$1"\""}' | sh
+}
+
+######## FUNNNNNNNNNN!!!!!!!!!!!!  ############
+alias trip='while :;do printf "\e[%d;%dH\e[48;5;%dm \e[0m" $(($RANDOM%$LINES)) $(($RANDOM%$COLUMNS)) $(($RANDOM%216 )); done # Its alive!'
