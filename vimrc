@@ -119,6 +119,7 @@ map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 map <silent> <LocalLeader>imp :TsuImport<CR>
+nmap <silent> <LocalLeader>tt :TagbarToggle<CR>
 
 "ws -- white space: removes all trailing whitespace from a file
 map <silent> <LocalLeader>ws :%s/\s\+$//<CR>
