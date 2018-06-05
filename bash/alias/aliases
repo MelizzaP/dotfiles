@@ -51,6 +51,7 @@ alias rc='bundle exec rails console'
 alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'
 alias brake='bundle exec rake'
+alias brspec='bundle exec rspec'
 
 alias rst='touch tmp/restart.txt'
 
