@@ -37,6 +37,7 @@ highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
 set number
+set relativenumber
 set showmatch
 set incsearch
 set background=light
@@ -154,7 +155,7 @@ map <silent> <LocalLeader>hws :highlight clear ExtraWhitespace<CR>
 
 " Highlight too-long lines
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%81v.*/
-highlight LineLengthError ctermbg=182 guibg=black
+highlight LineLengthError ctermbg=20 guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=182 guibg=black
 
 "Set filetypes
@@ -282,8 +283,8 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "Bundle 'Valloric/YouCompleteMe'
 "
 " Cursor/Line Highlighting
-autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=87
-autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=87
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=56
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=56
 
 augroup CursorLine
   au!
