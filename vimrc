@@ -37,6 +37,7 @@ highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
 set number
+set relativenumber
 set showmatch
 set incsearch
 set background=light
@@ -156,6 +157,9 @@ map <silent> <LocalLeader>hws :highlight clear ExtraWhitespace<CR>
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%81v.*/
 highlight LineLengthError ctermbg=17 guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=20 guibg=black
+
+"Set filetypes
+au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru,Guardfile,*.god}     set ft=ruby
 
 "Set filetypes
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru,Guardfile,*.god}     set ft=ruby
