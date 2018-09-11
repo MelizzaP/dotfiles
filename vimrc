@@ -154,8 +154,8 @@ map <silent> <LocalLeader>hws :highlight clear ExtraWhitespace<CR>
 
 " Highlight too-long lines
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%81v.*/
-highlight LineLengthError ctermbg=182 guibg=black
-autocmd ColorScheme * highlight LineLengthError ctermbg=182 guibg=black
+highlight LineLengthError ctermbg=17 guibg=black
+autocmd ColorScheme * highlight LineLengthError ctermbg=20 guibg=black
 
 "Set filetypes
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru,Guardfile,*.god}     set ft=ruby
@@ -282,8 +282,8 @@ let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "trimmin
 "Bundle 'Valloric/YouCompleteMe'
 "
 " Cursor/Line Highlighting
-autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=87
-autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=87
+autocmd VimEnter * hi CursorLine cterm=NONE ctermbg=55
+autocmd VimEnter * hi CursorColumn cterm=NONE ctermbg=55
 
 augroup CursorLine
   au!
