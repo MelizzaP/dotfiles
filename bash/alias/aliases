@@ -1,4 +1,5 @@
 source ~/.bash/alias/git
+source ~/.bash/alias/kill
 
 ####### General ###########
 
