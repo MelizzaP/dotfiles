@@ -16,3 +16,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/serverless.bash ] && . /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/sls.bash ] && . /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/sls.bash
