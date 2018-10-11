@@ -18,3 +18,28 @@ alias veditorial='edcd; tp; vim'
 ## postgres
 alias psql-dev='psql thinkcerca_development'
 alias psql-test='psql thinkcerca_test'
+
+## heroku
+function heroku-review-console {
+  heroku run rails c -a thinkcerca-dev-pr-$1
+}
+
+function heroku-stage-console {
+  heroku run rails c -a thinkcerca-stage
+}
+
+function heroku-dev-console {
+  heroku run rails c -a thinkcerca-stage
+}
+
+function heroku-review-bash {
+  heroku run rails c -a thinkcerca-dev-pr-$1
+}
+
+function heroku-stage-bash {
+  heroku run rails c -a thinkcerca-stage
+}
+
+function heroku-dev-bash {
+  heroku run rails c -a thinkcerca-stage
+}
