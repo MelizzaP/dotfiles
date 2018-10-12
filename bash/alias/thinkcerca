@@ -11,9 +11,12 @@ alias tcd="tccd; tr; stt docker; docker-compose -f docker-compose-dev.yml up"
 alias todo='cd ~/Google\ Drive/todo/; to; stt TODO Yo; vi today.txt'
 alias resque='QUEUE=* rake resque:work'
 alias edcd='cd ~/code/editorial'
-alias start-editorial='tr; stt editorial server; edcd; dotenv rails s -p 5000'
+alias editorial-server='tr; stt editorial server; edcd; dotenv rails s -p 5000'
 alias editorial='edcd; tg; stt editorial'
 alias veditorial='edcd; tp; vim'
+
+alias start-editorial='osascript ~/dotfiles/scripts/editorial-iterm.scpt'
+alias start-cerca='osascript ~/dotfiles/scripts/thinkCERCA-iterm.scpt'
 
 ## postgres
 alias psql-dev='psql thinkcerca_development'
