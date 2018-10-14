@@ -159,6 +159,9 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=20 guibg=black
 
 "Set filetypes
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru,Guardfile,*.god}     set ft=ruby
+
+"Set filetypes
+au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru,Guardfile,*.god}     set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                                         set ft=markdown
 au BufNewFile,BufRead {*.coffee,*.coffee.erb}                                         set filetype=coffee
 au BufNewFile,BufRead {*.eco,*.eco.erb}                                               set filetype=mason

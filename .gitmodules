@@ -219,3 +219,6 @@
 [submodule "vim/bundle/vim-import-js"]
 	path = vim/bundle/vim-import-js
 	url = git@github.com:Galooshi/vim-import-js.git
+[submodule "vim/bundle/rufo-vim"]
+	path = vim/bundle/rufo-vim
+	url = git@github.com:ruby-formatter/rufo-vim.git
