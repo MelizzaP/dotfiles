@@ -23,7 +23,7 @@ tell application "iTerm2"
       end tell
 
       tell last session
-        write text "tc"
+        write text "tc; ty; stt aux"
       end tell
     end tell
 
@@ -32,6 +32,14 @@ tell application "iTerm2"
     tell thirdTab
       tell first session
         write text "tcv"
+      end tell
+    end tell
+
+    set fourthTab to (create tab with default profile)
+    fourthTab
+    tell fourthTab
+      tell first session
+        write text "tc"
       end tell
     end tell
   end tell
