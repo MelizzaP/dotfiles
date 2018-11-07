@@ -86,6 +86,7 @@ alias ohfudge='git merge --abort'
 alias gbc='gbclean'
 alias git-remote-branches-by='git-remote-branches | grep'
 alias gbg="git branch | grep"
+alias force-push="git push --force-with-lease"
 
 alias gba='git-branch-authors'
 
