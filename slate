@@ -29,22 +29,22 @@ bind down:shift;cmd  nudge +0   +03%
 # bind 2:ctrl;alt         throw 1 resize
 # bind 3:ctrl;alt         throw 2 resize
 
-bind right:cmd;alt throw right resize
-bind left:cmd;alt  throw left  resize
-bind up:cmd;alt    throw up    resize
-bind down:cmd;alt  throw 1  resize
-bind pad0:ctrl;alt throw left resize
-bind pad.:ctrl;alt throw right  resize
+bind right:cmd;ctrl throw right resize
+bind left:cmd;ctrl  throw left  resize
+bind up:cmd;ctrl    throw up    resize
+bind down:cmd;ctrl  throw 1  resize
+bind pad0:ctrl;ctrl throw left resize
+bind pad.:ctrl;ctrl throw right  resize
 
 bind 0:ctrl;alt throw left resize
 bind .:ctrl;alt throw right  resize
 # Focus Bindings
 bind pad8:cmd;ctrl focus up
 bind pad2:cmd;ctrl focus down
-bind up:cmd;ctrl   focus behind
-bind down:cmd;ctrl focus behind
-bind left:cmd;ctrl focus left
-bind right:cmd;ctrl focus right
+bind up:cmd;ctrl;alt  focus behind
+bind down:cmd;ctrl;alt focus behind
+bind left:cmd;ctrl;alt focus left
+bind right:cmd;ctrl;alt focus right
 
 
 # Window Hints
