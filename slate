@@ -33,8 +33,8 @@ bind right:cmd;ctrl throw right resize
 bind left:cmd;ctrl  throw left  resize
 bind up:cmd;ctrl    throw up    resize
 bind down:cmd;ctrl  throw 1  resize
-bind pad0:ctrl;ctrl throw left resize
-bind pad.:ctrl;ctrl throw right  resize
+bind pad0:ctrl;cmd throw left resize
+bind pad.:ctrl;cmd throw right  resize
 
 bind 0:ctrl;alt throw left resize
 bind .:ctrl;alt throw right  resize
