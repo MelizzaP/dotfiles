@@ -113,3 +113,6 @@ function unrarall() {
 
 ######## FUNNNNNNNNNN!!!!!!!!!!!!  ############
 alias trip='while :;do printf "\e[%d;%dH\e[48;5;%dm \e[0m" $(($RANDOM%$LINES)) $(($RANDOM%$COLUMNS)) $(($RANDOM%216 )); done # Its alive!'
+
+###### Javascript tags #####
+alias jtags="ctags -R client './' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
