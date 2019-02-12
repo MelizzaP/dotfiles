@@ -222,3 +222,6 @@
 [submodule "vim/bundle/rufo-vim"]
 	path = vim/bundle/rufo-vim
 	url = git@github.com:ruby-formatter/rufo-vim.git
+[submodule "vim/bundle/ale"]
+	path = vim/bundle/ale
+	url = git@github.com:w0rp/ale.git
