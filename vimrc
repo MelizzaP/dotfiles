@@ -62,6 +62,8 @@ let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
 
+let g:ale_sign_error = 'XX'
+let g:ale_sign_warning = '--'
 let vimclojure#WantNailgun = 0
 let vimclojure#HighlightBuiltins = 1
 let vimclojure#ParenRainbow = 1
