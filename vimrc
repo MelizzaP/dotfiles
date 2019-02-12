@@ -57,6 +57,8 @@ set clipboard=unnamed
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
+highlight ALEWarning ctermbg=165
+highlight ALEWarning ctermbg=166
 
 let html_use_css=1
 let html_number_lines=0
@@ -122,6 +124,8 @@ map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 map <silent> <LocalLeader>imp :TsuImport<CR>
 nmap <silent> <LocalLeader>tt :TagbarToggle<CR>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "ws -- white space: removes all trailing whitespace from a file
 map <silent> <LocalLeader>ws :%s/\s\+$//<CR>
@@ -273,6 +277,7 @@ noremap <C-M-Left> :vertical resize -2<CR>
 noremap <C-M-Right> :vertical resize +2<CR>
 noremap <C-M-Up> :resize +1<CR>
 noremap <C-M-Down> :resize -1<CR>
+
 
 " Disable Markdown folding
 let g:vim_markdown_folding_disabled=1
