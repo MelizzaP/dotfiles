@@ -54,6 +54,7 @@ set ignorecase
 set smartcase
 set diffopt+=vertical
 set clipboard=unnamed
+set rtp+=/usr/local/opt/fzf
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
@@ -63,6 +64,7 @@ highlight ALEWarning ctermbg=166
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
+let g:ale_fix_on_save = 1
 
 let g:ale_sign_error = 'XX'
 let g:ale_sign_warning = '--'
@@ -107,18 +109,16 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 imap <C-L> <SPACE>=><SPACE>
+map <silent> ; :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>be :CtrlPBuffer<CR>
 map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
-map <silent> <LocalLeader>nh :nohls<CR>
-map <LocalLeader>aw :Ack '<C-R><C-W>'
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
