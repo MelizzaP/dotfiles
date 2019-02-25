@@ -240,3 +240,6 @@
 [submodule "vim/bundle/vim-emoji"]
 	path = vim/bundle/vim-emoji
 	url = git@github.com:junegunn/vim-emoji.git
+[submodule "vim/bundle/vim-css-color"]
+	path = vim/bundle/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
