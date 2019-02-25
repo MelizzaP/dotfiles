@@ -55,6 +55,7 @@ set smartcase
 set diffopt+=vertical
 set clipboard=unnamed
 set rtp+=/usr/local/opt/fzf
+set completefunc=emoji#complete
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
@@ -66,8 +67,8 @@ let html_number_lines=0
 let html_no_pre=1
 let g:ale_fix_on_save = 1
 
-let g:ale_sign_error = 'XX'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = emoji#for('skull')
+let g:ale_sign_warning = emoji#for('collision')
 let vimclojure#WantNailgun = 0
 let vimclojure#HighlightBuiltins = 1
 let vimclojure#ParenRainbow = 1
