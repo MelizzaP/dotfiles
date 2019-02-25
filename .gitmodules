@@ -204,42 +204,62 @@
 	path = vim/bundle/vim-prettier
 	url = git@github.com:prettier/vim-prettier.git
 
+# ctrlp
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule "tagbar"]
-	path = tagbar
-	url = https://github.com/majutsushi/tagbar.git
+
+# Tagbar
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+
+# Auto pairs
 [submodule "vim/bundle/auto-pairs"]
 	path = vim/bundle/auto-pairs
 	url = git://github.com/jiangmiao/auto-pairs.git
+
+# Import Finder
 [submodule "vim/bundle/vim-import-js"]
 	path = vim/bundle/vim-import-js
 	url = git@github.com:Galooshi/vim-import-js.git
+
+# Ruby auto formatter
 [submodule "vim/bundle/rufo-vim"]
 	path = vim/bundle/rufo-vim
 	url = git@github.com:ruby-formatter/rufo-vim.git
+
+# Ale
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = git@github.com:w0rp/ale.git
+
+# Fuzzy finder vim extention
 [submodule "vim/bundle/fzf.vim"]
 	path = vim/bundle/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+
+# CSV reader
 [submodule "vim/bundle/csv.vim"]
 	path = vim/bundle/csv.vim
 	url = git@github.com:chrisbra/csv.vim.git
-[submodule "vim/bundle/--force"]
+
+# Airline Themes
+[submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/--force
 	url = git@github.com:vim-airline/vim-airline-themes.git
+
+# HTML Snippets
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
+
+# Emoji
 [submodule "vim/bundle/vim-emoji"]
 	path = vim/bundle/vim-emoji
 	url = git@github.com:junegunn/vim-emoji.git
+
+# Vim CSS Color
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
