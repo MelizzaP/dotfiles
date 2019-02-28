@@ -69,7 +69,6 @@ let g:ale_fix_on_save = 1
 
 let g:ale_sign_error = emoji#for('skull')
 let g:ale_sign_warning = emoji#for('collision')
-let g:rufo_auto_formatting=1
 let vimclojure#WantNailgun = 0
 let vimclojure#HighlightBuiltins = 1
 let vimclojure#ParenRainbow = 1
