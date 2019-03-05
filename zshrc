@@ -4,7 +4,33 @@ ZSH_THEME_SELECTED="$ZSH_THEME"
 
 # Load oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-plugins=($plugins brew capistrano debian git gem heroku npm rails ruby rvm svn yum)
+plugins=(
+  $plugins
+  aws
+  brew
+  bundler
+  command-not-found
+  common-aliases
+  copy-file
+  debian
+  docker
+  gitfast
+  git-extras
+  gem
+  heroku
+  history
+  jsontools
+  node
+  npm
+  osx
+  rails
+  ruby
+  rvm
+  svn
+  web-search
+  yarn
+  yum
+)
 
 if [[ "$unamestr" == 'Darwin' ]]; then
   # Include osx plugin on osx
@@ -21,7 +47,7 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 unsetopt correct_all
 
 # Bash settings
-. ~/.bash/aliases
+. ~/.bash/alias/aliases
 . ~/.bash/paths
 . ~/.bash/config
 
