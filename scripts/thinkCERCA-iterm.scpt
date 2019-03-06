@@ -23,7 +23,7 @@ tell application "iTerm2"
       end tell
 
       tell last session
-        write text "tc; ty; stt aux"
+        write text "tc; ty; stt aux; zsh"
       end tell
     end tell
 
@@ -39,7 +39,7 @@ tell application "iTerm2"
     fourthTab
     tell fourthTab
       tell first session
-        write text "tc"
+        write text "tc; zsh"
       end tell
     end tell
   end tell
