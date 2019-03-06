@@ -1,5 +1,4 @@
 # Pre-load .localrc for custom theme selection
-[[ -f ~/.localrc ]] && . ~/.localrc
 ZSH_THEME_SELECTED="$ZSH_THEME"
 
 # Load oh-my-zsh
