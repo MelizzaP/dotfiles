@@ -1,4 +1,4 @@
-# Melissa Patterson Dot Files
+# Melissa's Dot Files
 
 Provides an organized, version controlled, portable system configuration for *nix systems (including MacOS).  Notably, in includes shell customizations and aliases, custom VI commands and plugins, and the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) project.
 
@@ -16,7 +16,7 @@ Provides an organized, version controlled, portable system configuration for *ni
 To set a theme, set the name to the ZSH_THEME environment variable in the ~/.localrc file.  For example, add the following line:
 
 ```
-    ZSH_THEME="robbyrussell"
+    ZSH_THEME="agnoster"
 ```
 
 The Dot Files enable many plugins by default, but to enable additional oh-my-zsh plugins, list them in the plugins environment variable in ~/.localrc.  For example:
@@ -29,156 +29,83 @@ The Dot Files enable many plugins by default, but to enable additional oh-my-zsh
 
 ### General
 
-```
-  autoformat [filename]
-    Removes whitespace and standardizes spacing
-    ex: autoformat *.rb
-
-  autoformatall
-    Will autoformat all compatible files within a directory
-
-  replace [files] [find text] [replace text]
-    Performs a find/replace across multiple files
-    ex: replace "*.erb" "<b>" "<strong>"
-
-  reload
-    Reload all bash files
-
-    open .
-        Open current folder in file browser
-        (This is default MacOS behavior, but dotfiles enables it on Linux)
-
-  h [file in the home directory]
-    Jump to a folder in the home directory with tab completion
-    ex: h Mu[tab] -> h Music
-
-  c [file in the $CODE_HOME directory (~/code by default)]
-    Jump to a folder in the $CODE_HOME directory with tab completion
-    ex: c do[tab] -> c dotfiles
-```
+| Alias | Result | Example |
+|-------|--------|---------|
+| autoformat [filename] |  Removes whitespace and standardizes spacing | autoformat *.rb |
+| autoformatall | Will autoformat all compatible files within a directory | |
+| c [file in the $CODE_HOME directory (~/code by default)] | Jump to a folder in the $CODE_HOME directory with tab completion | c do[tab] -> c dotfiles
+| h [file in the home directory] | Jump to a folder in the home directory with tab completion | h Mu[tab] -> h Music
+| kill-port | kill the process on port n | kill-port 3000 |
+| open . |  Open current folder in file browser | |
+| replace [files] [find text] [replace text] | Performs a find/replace across multiple files | replace "*.erb" "<b>" "<strong>" |
+| reload | Reload all bash files | |
 
 ### Git
 
 Git gets tab completion, colored branch data at the prompt, as well as the following commands.
 
-```
-  gco -or- git co
-    git checkout
-
-  gs -or- git st
-    git status
-
-  gb -or- git br
-    git branch
-
-  gg -or- git g
-    git grep (with line breaks for clearer output)
-
-  ga
-    git add
-
-  git rb [remote branch name]
-    checkout and track a remote branch
-
-  git lg
-    Detailed log view, including authors and branch history
-
-  brclean
-    Remove all *local* branches that have been merged
-
-  rbrclean
-    Remove all *remote* branches that have been merged
-
-  gbc -or- gbclean
-    Remove all *local and remote* merged branches
-
-  gba -or- git-branch-authors
-    List the authors of all git branches
-
-  git pup
-    Install and initialize all git submodules to version in tree
-
-  git su
-    Submodule update: update all submodules to recent version
-
-  git autoformat
-    Installs a git hook to autoformat all files during commit
-    Note: This feature is still experimental
-```
+| Alias | Command |
+|-------|---------|
+| brclean | Remove all *local* branches that have been merged |
+| conflicts | list merge conflicts |
+| force-push | git push --force-with-lease |
+| ga | git add |
+| gb | git branch |
+| gba -or- git-branch-authors | List the authors of all git branches |
+| gbc -or- gbclean | Remove all *local and remote* merged branches |
+| gbg | git branch grep |
+| gco -or- git co | git checkout |
+| gd | git diff |
+| gdc | git diff --cached |
+| git autoformat | Installs a git hook to autoformat all files during commit |
+| git lg | Detailed log view, including authors and branch history |
+| git pup | Install and initialize all git submodules to version in tree |
+| git rb [remote branch name] | checkout and track a remote branch |
+| git su | Submodule update: update all submodules to recent version |
+| git-recent | show git branches organized by date |
+| git-remote-branches | git remote branches grep |
+| gg -or- git g | git grep (with line breaks for clearer output) |
+| gl | git pull |
+| gm | git commit -m |
+| gma | git commit -amend |
+| gs -or- git st | git status |
+| gst | git stash |
+| rbrclean | Remove all *remote* branches that have been merged |
+| shit-nevermind | git merge --abort |
 
 ### Rails
-
-```
-  log
-    tail the development log
-
-  tlog
-    tail the test log
-
-  rs
-    rails server
-
-  rc
-    rails console
-
-  rg
-    rails generate
-
-  rst
-    restart server (touch tmp/restart.txt)
-```
+| Alias | Command |
+|-------|---------|
+| log | tail the development log |
+| tlog | tail the test log |
+| rs | rails server |
+| rc | rails console |
+| rg | rails generate |
+| rst | restart server (touch tmp/restart.txt) |
 
 ## VI Aliases
 
 Note: many of the VI commands will require the installation of **gvim** on Linux machines, or **mvim** on MacOS machines.
 
-```
-  start ty[tab] -> start typing
-      Autocomplete is enabled via the YouCompleteMe plugin
-
-  \ff
-    Open CtrlP, an excellent way to quickly open files
-
-  \nt
-    Open Nerd Tree, a tree-style directory browser
-
-  \be
-    Open Buffer Explorer, a list of recently opened files
-
-  \==
-      Autoformat entire file, fixing indentation and spacing
-
-  \cc
-    Comment lines
-
-  \uc
-    Uncomment lines
-
-  \ws
-    Remove all trailing whitespace from file
-
-  \nh
-    Stop highlighting words (after a find operation)
-
-  \fl
-    Format a line into multiple lines
-    ex: some_method_call(param1, param2, param3)
-        \fl
-        some_method_call(
-          param1,
-          param2,
-          param3)
-
-  :A
-    Switch between test files and implementation file
-
-  ctrl+p
-    Autocomplete
-
-  ctrl+x, ctrl-c, ctrl-v
-    Cut, copy, and paste now work in Linux VI
-```
+| Command | Result |
+|---------|--------|
+| ; | Open fuzzy finder |
+| :A | Switch between test files and implementation file |
+| \ == | Autoformat entire file, fixing indentation and spacing |
+| \be | Open Buffer Explorer, a list of recently opened files |
+| \ff | Open CtrlP, an excellent way to quickly open files |
+| \fl | Format a line into multiple lines |
+| \g | go to the module of the variable under the curor |
+| \i | Import the any missing module, remove unsused modules |
+| \j | Import the module for the word under the cursor |
+| \nt | Open Nerd Tree, a tree-style directory browser |
+| \uc | Comment/Uncomment lines |
+| \ws | Remove all trailing whitespace from file |
+| ctrl+k, ctrl+j | Toggle ale errors |
+| ctrl+p | Autocomplete |
+| ctrl+x, ctrl-c, ctrl-v | Cut, copy, and paste now work in Linux VI |
+| start ty[tab] -> start typing | Autocomplete is enabled via the YouCompleteMe plugin |
 
 ## Credits
 
-This project is a fork of Ryan Bates' dotfiles, integrates oh-my-zsh, and borrows significantly from Drew Olson's vim_dotfiles, in addition to dozens of other sources.
+This project is a fork of a fork of a fork. Thanks to the group that created this.

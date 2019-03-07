@@ -34,7 +34,7 @@ rbrclean () {
 
 # Git Branch Clean: cleans out local and remote branches
 function gbclean {
-  # rbrclean
+  rbrclean
   brclean
   git pup
   git gc
@@ -67,26 +67,23 @@ function git-recent {
 }
 
 ################# Aliases ###############
+alias conflicts='git ls-files -u'
+alias force-push="git push --force-with-lease"
 alias ga='git add'
-alias gl='git pull'
-alias gm='git commit -m'
+alias gb='git branch'
+alias gba='git-branch-authors'
+alias gbc='gbclean'
+alias gbg="git branch | grep"
+alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias gst='git stash'
-alias gsp='git stash pop'
-alias gma='git commit -ammend'
-alias gg='git g'
-alias git-pretty-log="git log --graph --pretty=format:'\''%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset'\'' --abbrev-commit --all'"
-alias gsq='git rebase -i'
-alias conflicts='git ls-files -u'
-alias ohfudge='git merge --abort'
-alias gbc='gbclean'
 alias git-remote-branches-by='git-remote-branches | grep'
-alias gbg="git branch | grep"
-alias force-push="git push --force-with-lease"
-
-alias gba='git-branch-authors'
+alias gg='git g'
+alias gl='git pull'
+alias gm='git commit -m'
+alias gma='git commit -ammend'
+alias gs='git status'
+alias gsp='git stash pop'
+alias gst='git stash'
+alias shit-nevermind='git merge --abort'
 
