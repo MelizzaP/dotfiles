@@ -1,3 +1,6 @@
+# use .localrc for settings specific to one system
+[[ -f ~/.localrc ]] && . ~/.localrc
+
 # Pre-load .localrc for custom theme selection
 ZSH_THEME_SELECTED="$ZSH_THEME"
 
@@ -10,6 +13,8 @@ plugins=(
   bundler
   command-not-found
   common-aliases
+  colorize
+  colored-man-pages
   copy-file
   debian
   docker
@@ -55,12 +60,3 @@ unsetopt correct_all
 . ~/.zsh/aliases
 . ~/.zsh/completion
 . ~/.zsh/prompt
-
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && . ~/.localrc
-
-# added by travis gem
-[ -f /Users/melissapatterson/.travis/travis.sh ] && source /Users/melissapatterson/.travis/travis.sh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
