@@ -8,6 +8,8 @@ if [ "$TERM" != "dumb" ] && [ -n "$TERM" ]; then
   source ~/.bash/prompt
 fi
 
+eval "$(rbenv init -)"
+
 # added by travis gem
 [ -f /Users/melissapatterson/.travis/travis.sh ] && source /Users/melissapatterson/.travis/travis.sh
 
@@ -17,3 +19,7 @@ fi
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/sls.bash ] && . /Users/melissapatterson/code/matte-daemon/node_modules/tabtab/.completions/sls.bash
+
+export NVM_DIR="nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

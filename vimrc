@@ -110,7 +110,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 imap <C-L> <SPACE>=><SPACE>
-map <silent> ; :FZF<CR>
+map <silent> s :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
@@ -265,17 +265,16 @@ let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
 " VIM Split Enhancements
-nnoremap <M-Right> <C-W>l
-nnoremap <M-Left> <C-W>h
-nnoremap <M-Down> <C-W>j
-nnoremap <M-Up> <C-W>k
+nnoremap <M-Right> <C-W>n
+nnoremap <M-Left> <C-W>d
+nnoremap <M-Down> <C-W>h
+nnoremap <M-Up> <C-W>t
 
 " Pane resizing
 noremap <C-M-Left> :vertical resize -2<CR>
 noremap <C-M-Right> :vertical resize +2<CR>
 noremap <C-M-Up> :resize +1<CR>
 noremap <C-M-Down> :resize -1<CR>
-
 
 " Disable Markdown folding
 let g:vim_markdown_folding_disabled=1
