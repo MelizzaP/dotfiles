@@ -3,13 +3,6 @@ set nocompatible
 syntax enable
 
 filetype off
-" Disable FuzzyFinder for old version of VIM
-if v:version < '702'
-  let g:pathogen_disabled = []
-  call add(g:pathogen_disabled, 'l9')
-  call add(g:pathogen_disabled, 'vim-fuzzyfinder')
-  call add(g:pathogen_disabled, 'vimclojure')
-endif
 
 call pathogen#infect()
 filetype plugin indent on
@@ -31,6 +24,9 @@ vnoremap ST :Strikethrough<CR>
 vnoremap OL :Overline<CR>
 vnoremap UL :Underline<CR>
 vnoremap DUL :DoubleUnderline<CR>
+let g:startify_session_autoload= 1
+autocmd VimEnter * if !argc() | Startify | NERDTree | wincmd w | endif
+
 
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90

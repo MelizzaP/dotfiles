@@ -67,11 +67,6 @@
 	path = vim/bundle/vim-endwise
   url = https://github.com/tpope/vim-endwise.git
 
-# Rainbow parens
-[submodule "vim/bundle/vim-niji"]
-	path = vim/bundle/vim-niji
-  url = https://github.com/vim-scripts/vim-niji.git
-
 # Auto-match parens
 [submodule "vim/bundle/paredit.vim"]
 	path = vim/bundle/paredit.vim
@@ -109,11 +104,6 @@
 
 ####### VI Syntax Highlighting ########
 
-# Syntax alerts on save
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-
 # Ruby syntax highlighting
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
@@ -128,11 +118,6 @@
 [submodule "vim/bundle/vim-jst"]
 	path = vim/bundle/vim-jst
   url = https://github.com/briancollins/vim-jst.git
-
-# Less file support
-[submodule "vim/bundle/vim-less"]
-	path = vim/bundle/vim-less
-  url = https://github.com/lunaru/vim-less.git
 
 # .TS file support
 [submodule "vim/bundle/typescript-vim"]
@@ -149,30 +134,10 @@
 	path = vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
 
-# CoffeeScript support
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-
-# Puppet syntax
-[submodule "vim/bundle/puppet-syntax-vim"]
-	path = vim/bundle/puppet-syntax-vim
-  url = https://github.com/puppetlabs/puppet-syntax-vim.git
-
-# Handlebars (HBS file) syntax
-[submodule "vim/bundle/vim-handlebars"]
-	path = vim/bundle/vim-handlebars
-  url = https://github.com/nono/vim-handlebars.git
-
 # Jade file syntax
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
   url = https://github.com/digitaltoad/vim-jade.git
-
-# Emblem file syntax
-[submodule "vim/bundle/vim-emblem"]
-	path = vim/bundle/vim-emblem
-	url = https://github.com/heartsentwined/vim-emblem.git
 
 # Clojure syntax support
 [submodule "vim/bundle/vim-clojure-static"]
@@ -183,16 +148,6 @@
 [submodule "vim/bundle/vim-slim"]
 	path = vim/bundle/vim-slim
   url = https://github.com/slim-template/vim-slim.git
-
-# Vim javascript
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-  url = https://github.com/pangloss/vim-javascript.git
-
-# Better JavaScript indentation
-[submodule "vim/bundle/JavaScript-Indent"]
-	path = vim/bundle/JavaScript-Indent
-  url = https://github.com/KurtPreston/JavaScript-Indent.git
 
 # HAML / SCSS support
 [submodule "vim/bundle/vim-haml"]
