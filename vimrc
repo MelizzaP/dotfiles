@@ -5,6 +5,7 @@ syntax enable
 filetype off
 
 call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
 
 compiler ruby
