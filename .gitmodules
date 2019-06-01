@@ -104,56 +104,6 @@
 
 ####### VI Syntax Highlighting ########
 
-# Ruby syntax highlighting
-[submodule "vim/bundle/vim-ruby"]
-	path = vim/bundle/vim-ruby
-  url = https://github.com/vim-ruby/vim-ruby.git
-
-# HTML highlighting
-[submodule "vim/bundle/vim-ragtag"]
-	path = vim/bundle/vim-ragtag
-  url = https://github.com/tpope/vim-ragtag.git
-
-# .JST syntax highlighting support
-[submodule "vim/bundle/vim-jst"]
-	path = vim/bundle/vim-jst
-  url = https://github.com/briancollins/vim-jst.git
-
-# .TS file support
-[submodule "vim/bundle/typescript-vim"]
-	path = vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-
-# .MD markdown support
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown
-
-# Cucumber file support
-[submodule "vim/bundle/vim-cucumber"]
-	path = vim/bundle/vim-cucumber
-	url = https://github.com/tpope/vim-cucumber.git
-
-# Jade file syntax
-[submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
-  url = https://github.com/digitaltoad/vim-jade.git
-
-# Clojure syntax support
-[submodule "vim/bundle/vim-clojure-static"]
-	path = vim/bundle/vim-clojure-static
-  url = https://github.com/guns/vim-clojure-static.git
-
-# Slim file support
-[submodule "vim/bundle/vim-slim"]
-	path = vim/bundle/vim-slim
-  url = https://github.com/slim-template/vim-slim.git
-
-# HAML / SCSS support
-[submodule "vim/bundle/vim-haml"]
-	path = vim/bundle/vim-haml
-	url = https://github.com/tpope/vim-haml.git
-
 # Prettier
 [submodule "vim/bundle/vim-prettier"]
 	path = vim/bundle/vim-prettier
@@ -194,11 +144,6 @@
 	path = vim/bundle/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
 
-# CSV reader
-[submodule "vim/bundle/csv.vim"]
-	path = vim/bundle/csv.vim
-	url = git@github.com:chrisbra/csv.vim.git
-
 # Airline Themes
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/--force
@@ -218,3 +163,8 @@
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
+
+# Syntax highlighting for a bunch of stuff
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
