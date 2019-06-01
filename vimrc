@@ -114,6 +114,8 @@ map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>be :CtrlPBuffer<CR>
+map <silent> <LocalLeader>hh :History<CR>
+map <silent> <LocalLeader>bb :Buffer<CR>
 map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>bd :bufdo :bd<CR>

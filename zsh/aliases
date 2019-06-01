@@ -4,3 +4,5 @@ alias reload='. ~/.zshrc'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+alias rip='\rg'

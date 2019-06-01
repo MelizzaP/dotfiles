@@ -12,3 +12,4 @@ eval "$(rbenv init -)"
 
 # added by travis gem
 [ -f /Users/melissapatterson/.travis/travis.sh ] && source /Users/melissapatterson/.travis/travis.sh
+

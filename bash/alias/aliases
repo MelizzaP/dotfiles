@@ -32,6 +32,7 @@ alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 
+alias rip='\rg'
 function autoformatall {
   autoformat "*.rb"
   autoformat "*.erb"
@@ -52,7 +53,6 @@ alias log='tail -f -n 800 log/development.log'
 alias tlog='tail -f -n 800 log/test.log'
 
 alias rc='bundle exec rails console'
-alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'
 alias brake='bundle exec rake'
 alias brspec='bundle exec rspec'
