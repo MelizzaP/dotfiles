@@ -1,6 +1,6 @@
 export EDITOR='vim'
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='\rg --follow --files --no-ignore-vcs --hidden'
 
 fpath=(~/.zsh/functions $fpath)
 

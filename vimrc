@@ -126,6 +126,8 @@ map <silent> <LocalLeader>imp :TsuImport<CR>
 nmap <silent> <LocalLeader>tt :TagbarToggle<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nnoremap <Leader>t :BTags<CR>
+nnoremap <Leader>T :Tags<CR>
 
 "ws -- white space: removes all trailing whitespace from a file
 map <silent> <LocalLeader>ws :%s/\s\+$//<CR>
