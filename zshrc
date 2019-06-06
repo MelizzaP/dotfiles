@@ -15,7 +15,7 @@ plugins=(
   common-aliases
   colorize
   colored-man-pages
-  copy-file
+  copyfile
   debian
   docker
   gitfast
