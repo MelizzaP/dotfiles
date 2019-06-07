@@ -258,8 +258,8 @@ imap <Esc>OQ /
 imap <Esc>Ol +
 imap <Esc>OS -
 
-"Map esc to jj
-:imap jj <Esc>
+"Map esc to hh
+:imap hh <Esc>
 
 " Enable PowerLine
 let g:Powerline_symbols = 'fancy'
