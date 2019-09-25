@@ -91,6 +91,7 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
                             \ '*vendor/*/test*', '*vendor/*/Test*',
                             \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
                             \ '*var/cache*', '*var/log*']
+set tags=./tags,tags;$HOME
 
 let g:autoclose_on = 1
 " au BufWinLeave * silent! mkview
