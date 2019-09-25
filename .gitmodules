@@ -42,6 +42,11 @@
 	path = vim/bundle/gundo
   url = https://github.com/sjl/gundo.vim.git
 
+# Undo tree viewing
+[submodule "vim/bundle/vim-ragtag"]
+	path = vim/bundle/vim-ragtag
+  url = https://github.com/tpope/vim-ragtag.git
+
 # Fancy status bar
 [submodule "vim/bundle/airline"]
 	path = vim/bundle/airline

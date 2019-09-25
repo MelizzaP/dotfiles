@@ -8,6 +8,7 @@ ZSH_THEME_SELECTED="$ZSH_THEME"
 ZSH=$HOME/.oh-my-zsh
 plugins=(
   $plugins
+  asdf
   aws
   brew
   bundler
@@ -60,3 +61,25 @@ unsetopt correct_all
 . ~/.zsh/aliases
 . ~/.zsh/completion
 . ~/.zsh/prompt
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+FZF_DEFAULT_COMMAND="bash -c 'sort -u <( rg --files  ) <( git ls-files  )'"
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
