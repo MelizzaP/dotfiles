@@ -75,20 +75,12 @@ let g:gist_detect_filetype = 1
 
 let g:rubycomplete_buffer_loading = 1
 
-let g:ctrlp_custom_ignore = {
-  \ 'file': '\v\.(exe|so|dll|bak|orig|sw[po]|class|png|jpeg|jpg)$',
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|tmp|node_modules|vendor|source_maps|coverage)$'
-  \ }
-let g:ctrlp_match_window  = 'top,order:ttb,min:1,max:20,results:20'
-let g:ctrlp_reuse_window = 'startify'
-
 let g:no_html_toolbar = 'yes'
 
 let g:prettier#autoformat = 0
 let g:prettier#config#parser = 'babylon'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
-" Delete this line (or set g:autoclose_on to 1) to enable autoclose parens
 let g:autoclose_on = 1
 " au BufWinLeave * silent! mkview
 " au BufWinEnter * silent! loadview
@@ -106,6 +98,7 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+let maplocalleader="\<Space>"
 imap <C-L> <SPACE>=><SPACE>
 map <silent> s :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
