@@ -62,7 +62,11 @@ highlight ALEWarning ctermbg=166
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
+" ALE Config
 let g:ale_fix_on_save = 1
+let g:ale_close_preview_on_insert = 1
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 10
 
 let g:ale_sign_error = emoji#for('skull')
 let g:ale_sign_warning = emoji#for('collision')
@@ -80,6 +84,13 @@ let g:no_html_toolbar = 'yes'
 let g:prettier#autoformat = 0
 let g:prettier#config#parser = 'babylon'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+
+let g:gutentags_cache_dir = '~/.vim/gutentags'
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
+                            \ '*.phar', '*.ini', '*.rst', '*.md',
+                            \ '*vendor/*/test*', '*vendor/*/Test*',
+                            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
+                            \ '*var/cache*', '*var/log*']
 
 let g:autoclose_on = 1
 " au BufWinLeave * silent! mkview
@@ -103,9 +114,6 @@ imap <C-L> <SPACE>=><SPACE>
 map <silent> s :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>be :CtrlPBuffer<CR>
 map <silent> <LocalLeader>hh :History<CR>
@@ -114,13 +122,13 @@ map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal bu
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
-map <silent> <LocalLeader>uc :TComment<CR>
 map <silent> <LocalLeader>imp :TsuImport<CR>
 nmap <silent> <LocalLeader>tt :TagbarToggle<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <Leader>t :BTags<CR>
 nnoremap <Leader>T :Tags<CR>
+map<silent> <LocalLeader>df :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "ws -- white space: removes all trailing whitespace from a file
 map <silent> <LocalLeader>ws :%s/\s\+$//<CR>
