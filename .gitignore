@@ -9,3 +9,4 @@ vimrc.local
 gvimrc.local
 bin/repos
 /tags
+vim/gutentags

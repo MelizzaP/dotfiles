@@ -22,12 +22,6 @@
 	path = vim/bundle/vim-rails
   url = git://github.com/tpope/vim-rails.git
 
-# Directory tree with \nt
-[submodule "vim/bundle/NERD_tree"]
-	path = vim/bundle/NERD_tree
-	url = git@github.com:scrooloose/nerdtree.git
-
-# Fuzzy file finder
 [submodule "vim/bundle/vim-autoformat-rails"]
 	path = vim/bundle/vim-autoformat-rails
   url = https://github.com/KurtPreston/vim-autoformat-rails.git

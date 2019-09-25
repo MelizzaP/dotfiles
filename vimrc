@@ -26,8 +26,6 @@ vnoremap OL :Overline<CR>
 vnoremap UL :Underline<CR>
 vnoremap DUL :DoubleUnderline<CR>
 let g:startify_session_autoload= 1
-autocmd VimEnter * if !argc() | Startify | NERDTree | wincmd w | endif
-
 
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90
@@ -206,23 +204,6 @@ let Tlist_WinWidth = 50
 map <F5> :TlistToggle<cr>
 nnoremap <F6> :GundoToggle<CR>
 
-" Close window if NERDTree is only open window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Open NERDTree on launch if no file specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" returns true iff is NERDTree open/active
-function! RCisNTOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" returns true iff focused window is NERDTree window
-function! RCisNTFocused()
-  return -1 != match(expand('%'), 'NERD_Tree')
-endfunction
-
 " returns true iff focused window is FuzzyFinder
 function! RCisFFFocused()
   return -1 != match(expand('%'), 'fuf')
@@ -232,16 +213,6 @@ endfunction
 function! RCisRspecFocused()
   return -1 != match(expand('%'), 'rb_test_output')
 endfunction
-
-" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! RCsyncTree()
-  if &modifiable && RCisNTOpen() && !RCisNTFocused() && !RCisFFFocused() && !RCisRspecFocused() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-autocmd BufEnter * call RCsyncTree()
 
 " Fix numpad escape character issue
 imap <Esc>Oq 1
