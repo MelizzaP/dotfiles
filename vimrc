@@ -4,8 +4,31 @@ syntax enable
 
 filetype off
 
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin('~/.vim/plugz')
+  Plug 'bkad/CamelCaseMotion'
+  Plug 'vim-airline/vim-airline'
+  Plug 'dmerejkowsky/vim-ale'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'kien/ctrlp.vim'
+  Plug 'mattn/emmet-vim'
+  Plug '/usr/local/opt/fzf'
+  Plug 'sjl/gundo.vim'
+  Plug 'ruby-formatter/rufo-vim'
+  Plug 'majutsushi/tagbar'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'ap/vim-css-color'
+  Plug 'junegunn/vim-emoji'
+  Plug 'tpope/vim-endwise'
+  Plug 'tpope/vim-fugitive'
+  Plug 'ludovicchabant/vim-gutentags'
+  Plug 'Galooshi/vim-import-js'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'prettier/vim-prettier'
+  Plug 'tpope/vim-ragtag'
+  Plug 'mhinz/vim-startify'
+  Plug 'tpope/vim-surround'
+call plug#end()
+
 filetype plugin indent on
 
 compiler ruby

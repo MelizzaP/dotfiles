@@ -10,3 +10,4 @@ gvimrc.local
 bin/repos
 /tags
 vim/gutentags
+vim/plugz
