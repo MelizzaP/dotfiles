@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugz')
   Plug 'jiangmiao/auto-pairs'
   Plug 'kien/ctrlp.vim'
   Plug 'mattn/emmet-vim'
-  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
   Plug 'sjl/gundo.vim'
   Plug 'ruby-formatter/rufo-vim'
   Plug 'majutsushi/tagbar'
