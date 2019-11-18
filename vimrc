@@ -59,6 +59,7 @@ set showmatch
 set incsearch
 set background=light
 set hidden
+set previewheight=10
 set backspace=indent,eol,start
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ruler
@@ -150,7 +151,8 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <Leader>t :BTags<CR>
 nnoremap <Leader>T :Tags<CR>
-map<silent> <LocalLeader>df :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map<silent> <LocalLeader>df :exec("tag ".expand("<cword>"))<CR>
+map<silent> <LocalLeader>dff :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "ws -- white space: removes all trailing whitespace from a file
 map <silent> <LocalLeader>ws :%s/\s\+$//<CR>

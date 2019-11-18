@@ -66,6 +66,10 @@ function git-recent {
   git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
 }
 
+function gsquash () {
+  git rebase -i HEAD~$1
+}
+
 ################# Aliases ###############
 alias conflicts='git ls-files -u'
 alias force-push="git push --force-with-lease"
@@ -86,4 +90,4 @@ alias gs='git status'
 alias gsp='git stash pop'
 alias gst='git stash'
 alias shit-nevermind='git merge --abort'
-
+alias fetch-n-force='git fetch && git rebase origin/master && git push --force-with-lease'

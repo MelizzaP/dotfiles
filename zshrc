@@ -65,7 +65,6 @@ unsetopt correct_all
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 FZF_DEFAULT_COMMAND="bash -c 'sort -u <( rg --files  ) <( git ls-files  )'"
 
-if  [[ -f ~/.asdf ]]; then
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 . $HOME/.asdf/asdf.sh
@@ -76,4 +75,3 @@ if  [[ -f ~/.asdf ]]; then
 . $HOME/.asdf/completions/asdf.bash
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-fi
