@@ -27,6 +27,8 @@ call plug#begin('~/.vim/plugz')
   Plug 'tpope/vim-ragtag'
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-surround'
+  Plug 'rizzatti/dash.vim'
+  Plug 'mhinz/vim-mix-format'
 call plug#end()
 
 filetype plugin indent on
@@ -49,6 +51,7 @@ vnoremap OL :Overline<CR>
 vnoremap UL :Underline<CR>
 vnoremap DUL :DoubleUnderline<CR>
 let g:startify_session_autoload= 1
+let g:mix_format_on_save = 1
 
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90
@@ -84,17 +87,13 @@ highlight ALEWarning ctermbg=166
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
+
 " ALE Config
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
-let g:ale_completion_enabled = 1
-let g:ale_completion_max_suggestions = 10
 
 let g:ale_sign_error = emoji#for('skull')
 let g:ale_sign_warning = emoji#for('collision')
-let vimclojure#WantNailgun = 0
-let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
 
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
@@ -258,6 +257,8 @@ imap <Esc>OS -
 
 "Map esc to hh
 :imap hh <Esc>
+" Map Tab to ctrlp
+:imap <Tab> <c-p>
 
 " Enable PowerLine
 let g:Powerline_symbols = 'fancy'
