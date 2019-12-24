@@ -58,6 +58,7 @@ highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
 set number
+set relativenumber
 set showmatch
 set incsearch
 set background=light
