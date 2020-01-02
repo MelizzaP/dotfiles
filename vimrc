@@ -136,6 +136,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 let maplocalleader="\<Space>"
 imap <C-L> <SPACE>=><SPACE>
+imap <C-G> \|><SPACE>
 map <silent> s :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
