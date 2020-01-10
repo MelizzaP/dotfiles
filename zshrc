@@ -51,6 +51,7 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Disable auto-correct
 unsetopt correct_all
 
+. ~/.localrc
 # Bash settings
 . ~/.bash/alias/aliases
 . ~/.bash/paths
@@ -64,14 +65,4 @@ unsetopt correct_all
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 FZF_DEFAULT_COMMAND="bash -c 'sort -u <( rg --files  ) <( git ls-files  )'"
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+export ERL_AFLAGS="-kernel shell_history enabled"
