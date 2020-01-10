@@ -58,7 +58,6 @@ highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
 set number
-set relativenumber
 set showmatch
 set incsearch
 set background=light
@@ -263,7 +262,7 @@ imap <Esc>OS -
 "Map esc to hh
 :imap hh <Esc>
 " Map Tab to ctrlp
-:imap <Tab> <c-p>
+:imap <Tab><Tab> <c-p>
 
 " Enable PowerLine
 let g:Powerline_symbols = 'fancy'
