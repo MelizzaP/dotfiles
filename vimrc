@@ -51,12 +51,12 @@ vnoremap OL :Overline<CR>
 vnoremap UL :Underline<CR>
 vnoremap DUL :DoubleUnderline<CR>
 let g:startify_session_autoload= 1
-let g:mix_format_on_save = 1
 
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90
 highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 set hlsearch
+set nrformats=
 set number
 set showmatch
 set incsearch
