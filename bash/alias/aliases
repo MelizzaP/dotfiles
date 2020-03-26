@@ -1,6 +1,5 @@
 source ~/.bash/alias/git
 source ~/.bash/alias/kill
-source ~/.bash/alias/thinkcerca
 
 ####### General ###########
 
@@ -9,6 +8,7 @@ alias zreload='. ~/.zshrc'
 alias ..='cd ..'
 alias vi='vim'
 alias and='&&'
+alias local='source ~/.localrc'
 
 alias stt='set_tab_title'
 alias tb='tab-blue'
