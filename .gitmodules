@@ -9,3 +9,6 @@
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = https://github.com/oh-my-fish/packages-main.git
