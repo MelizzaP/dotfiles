@@ -1,8 +1,0 @@
-#!/bin/sh
-
-FILES_TO_CHANGE=`git diff --cached --name-only --diff-filter=M`
-autoformat $FILES_TO_CHANGE
-git add $FILES_TO_CHANGE
-NUM_FILES=`echo $FILES_TO_CHANGE | wc -w`
-reset
-echo "Formatted $NUM_FILES file(s)"
