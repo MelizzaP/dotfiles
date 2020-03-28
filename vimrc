@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugz')
   Plug 'tomtom/tcomment_vim'
   Plug 'ap/vim-css-color'
   Plug 'junegunn/vim-emoji'
+  Plug 'kyuhi/vim-emoji-complete'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
   Plug 'ludovicchabant/vim-gutentags'
@@ -74,7 +75,6 @@ set foldlevelstart=20
 set foldcolumn=0
 set ignorecase
 set smartcase
-set diffopt+=vertical
 set clipboard=unnamed
 set rtp+=/usr/local/opt/fzf
 set completefunc=emoji#complete
@@ -134,9 +134,12 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+
+let g:emoji_complete_overwrite_standard_keymaps = 0
 let maplocalleader="\<Space>"
 imap <C-L> <SPACE>=><SPACE>
 imap <C-G> \|><SPACE>
+imap <C-S> <Plug>(emoji-start-complete)
 map <silent> s :FZF<CR>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -F `ack --ruby -f`<CR>
