@@ -1,5 +1,4 @@
 set encoding=utf-8
-set nocompatible
 syntax enable
 
 filetype off
@@ -32,9 +31,11 @@ call plug#begin('~/.vim/plugz')
   Plug 'mhinz/vim-mix-format'
 call plug#end()
 
-filetype plugin indent on
-
 compiler ruby
+
+" NVim
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
 
 " modify selected text using combining diacritics
 command! -range -nargs=0 Overline        call s:CombineSelection(<line1>, <line2>, '0305')
