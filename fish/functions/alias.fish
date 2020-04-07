@@ -1,4 +1,3 @@
-
 ############ General ############
 function reload
   source ~/.config/fish/config.fish
@@ -82,4 +81,15 @@ function fetch-n-force
   git fetch
   git rebase origin/master
   force-push
+end
+
+
+############ NVim ############
+set -x VISUAL nvim
+function vim
+  nvim
+end
+
+function vi
+  nvim
 end
