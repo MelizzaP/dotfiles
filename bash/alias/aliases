@@ -5,6 +5,7 @@ source ~/.bash/alias/kill
 
 alias reload='. ~/.bash_profile'
 alias zreload='. ~/.zshrc'
+alias fish='fish && source ~/.config.fish'
 alias ..='cd ..'
 alias vi='vim'
 alias and='&&'

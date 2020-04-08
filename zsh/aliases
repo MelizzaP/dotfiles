@@ -6,3 +6,4 @@ alias reload='. ~/.zshrc'
 alias %=' '
 
 alias rip='\rg'
+alias fish='fish && source ~/.config.fish'
