@@ -17,25 +17,21 @@ then
   tmux send-keys -t dscout:2 'cd ~/code/dscout/apps/soma' C-m
   tmux send-keys -t dscout:2 'source .env && yarn start | lolcat' C-m
 
-  tmux new-window -n 🏄🏄♀️\ JS\ Tests\ 🏄🏄
-  tmux send-keys -t dscout\ Servers:3 'cd ~/code/dscout/apps/soma' C-m
-  tmux send-keys -t dscout\ Servers:3 'source .env && yarn test' C-m
-
   tmux new-session -s dscout -n 🌈\ Soma\ 🌈 -d
   tmux send-keys -t dscout:1.1 'cd ~/code/dscout/apps/soma' C-m
-  tmux send-keys -t dscout:1.1 'zsh' C-m
-  tmux send-keys -t dscout:1.1 'vi' C-m
+  tmux send-keys -t dscout:1.1 'fish' C-m
+  tmux send-keys -t dscout:1.1 'nvim' C-m
   tmux split-window -h -p 25 -t dscout:1.1
   tmux send-keys -t dscout:1.2 'cd ~/code/dscout/apps/soma' C-m
-  tmux send-keys -t dscout:1.2 'zsh' C-m
+  tmux send-keys -t dscout:1.2 'fish' C-m
 
   tmux new-window -n dscout -n 🐙\ Axon\ 🐙
   tmux send-keys -t dscout:2.1 'cd ~/code/dscout/apps/axon' C-m
-  tmux send-keys -t dscout:2.1 'zsh' C-m
+  tmux send-keys -t dscout:2.1 'fish' C-m
   tmux send-keys -t dscout 'vi' C-m
   tmux split-window -h -p 25 -t dscout:2.1
   tmux send-keys -t dscout:2.2 'cd ~/code/dscout/apps/axon' C-m
-  tmux send-keys -t dscout:2.2 'zsh' C-m
+  tmux send-keys -t dscout:2.2 'fish' C-m
 fi
 
 tmux attach -t dscout:1.1

@@ -1,1 +1,1 @@
-source ~/.config/fish/alais.fish
+source ~/dotfiles/fish/functions/alias.fish
