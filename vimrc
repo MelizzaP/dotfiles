@@ -6,7 +6,7 @@ filetype off
 call plug#begin('~/.vim/plugz')
   Plug 'bkad/CamelCaseMotion'
   Plug 'vim-airline/vim-airline'
-  Plug 'dmerejkowsky/vim-ale'
+  Plug 'dense-analysis/ale'
   Plug 'jiangmiao/auto-pairs'
   Plug 'kien/ctrlp.vim'
   Plug 'mattn/emmet-vim'
