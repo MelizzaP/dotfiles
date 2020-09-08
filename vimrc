@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugz')
   Plug 'tpope/vim-ragtag'
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-dadbod'
   Plug 'rizzatti/dash.vim'
   Plug 'mhinz/vim-mix-format'
 call plug#end()
